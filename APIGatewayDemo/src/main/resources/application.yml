@@ -1,0 +1,29 @@
+server:
+ port: 9099
+spring:
+ cloud:
+  gateway:
+   routes:
+    - id: Eureka-Demo-Client
+      uri: http://localhost:8080/
+      predicates:
+       - Path=/demo/**
+    - id: STUDENT-SERVICE-123
+      uri: lb://STUDENT-SERVICE
+      predicates:
+       - Path=/student/*
+    - id: BOOK-SERVICE
+      uri: lb://BOOK-SERVICE
+      predicates:
+       - Path=/book/*
+
+ application:
+  name: Api-Gateway
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8761/eureka
+  instance:
+   preferIpAddress: true
+
+ 
