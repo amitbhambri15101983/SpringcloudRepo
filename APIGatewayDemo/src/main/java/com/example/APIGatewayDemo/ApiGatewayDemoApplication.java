@@ -10,7 +10,8 @@ public class ApiGatewayDemoApplication {
 
 	public static void main(String[] args) {
 
-        SpringApplication.run(ApiGatewayDemoApplication.class, args);
+        SpringApplication.run(
+                ApiGatewayDemoApplication.class, args);
 	}
 
 }
