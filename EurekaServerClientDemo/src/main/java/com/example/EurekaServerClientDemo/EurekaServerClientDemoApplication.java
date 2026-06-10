@@ -19,7 +19,7 @@ public class EurekaServerClientDemoApplication {
 		SpringApplication.run(EurekaServerClientDemoApplication.class, args);
 	}
 
-	@RequestMapping(value = "/demo/api")
+	@RequestMapping(value = "/demo/client/api")
 	   public String home() {
 	      return "Eureka Client application : "+name;
 	   }

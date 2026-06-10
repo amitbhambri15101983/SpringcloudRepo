@@ -5,9 +5,9 @@ spring:
   gateway:
    routes:
     - id: Eureka-Demo-Client
-      uri: http://localhost:8080/
+      uri: http://localhost:8080/demo/client/api
       predicates:
-       - Path=/demo/**
+       - Path=/demo/client/**
     - id: STUDENT-SERVICE-123
       uri: lb://STUDENT-SERVICE
       predicates:
